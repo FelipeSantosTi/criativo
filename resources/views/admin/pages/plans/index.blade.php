@@ -31,7 +31,7 @@
                                 {{ $plan->description }}
                             </td>
                             <td>
-                                <a href="" class="btn btn-warning">Detalhes</a>
+                                <a href="{{ route('plans.show', $plan->url) }}" class="btn btn-warning">Detalhes</a>
                             </td>
                         </tr>
                     @endforeach

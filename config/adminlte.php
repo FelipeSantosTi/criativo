@@ -235,6 +235,11 @@ return [
                     'url'  => 'admin/plans',
                     'icon'    => 'fas fa-fw fa-share',
                 ],
+                [
+                    'text' => 'Criar',
+                    'url'  => 'admin/plans/create',
+                    'icon'    => 'fas fa-fw fa-share',
+                ],
             ],
         ],
     ],

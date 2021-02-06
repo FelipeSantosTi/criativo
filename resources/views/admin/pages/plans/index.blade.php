@@ -3,21 +3,30 @@
 @section('title', 'Planos')
 
 @section('content_header')
-    <h1>Planos <a href="{{ route('plans.create') }}" class="btn btn-primary">Criar</a></h1>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{{ route('admin.index') }}">Dashboard</a></li>
+        <li class="breadcrumb-item active"><a href="{{ route('plans.index') }}">Planos</a></li>
+    </ol>
+
+    <h1>Planos <a href="{{ route('plans.create') }}" class="btn btn-primary"><i class="fas fa-plus"></i></a></h1>
 @stop
 
 @section('content')
     <div class="card">
         <div class="card-header">
-            #Filtros
+            <form action="{{ route('plans.search') }}" method="POST" class="form form-inline">
+                @csrf
+                <input type="text" name="filter" placeholder="Filtro" class="form-control" value="{{ $filters['filter'] ?? '' }}">
+                <button type="submit" class="btn btn-dark">Filtrar</button>
+            </form>
         </div>
         <div class="card-body">
-            <table class="table table-condensed">
+            <table class="table table-striped">
                 <thead>
                     <tr>
                         <th>Nome</th>
                         <th>Descrição</th>
-                        <th width="50">Ações</th>
+                        <th width="120">Ações</th>
                     </tr>
                 </thead>
 
@@ -31,7 +40,8 @@
                                 {{ $plan->description }}
                             </td>
                             <td>
-                                <a href="{{ route('plans.show', $plan->url) }}" class="btn btn-warning">Detalhes</a>
+                                <a href="{{ route('plans.show', $plan->url) }}" class="btn btn-warning"><i class="fas fa-eye"></i></a>
+                                <a href="{{ route('plans.edit', $plan->url) }}" class="btn btn-primary"><i class="fas fa-pencil-alt"></i></a>
                             </td>
                         </tr>
                     @endforeach
@@ -39,7 +49,11 @@
             </table>
         </div>
         <div class="card-footer">
-            {!! $plans->links() !!}
+            @if (isset($filters))
+                {!! $plans->appends($filters)->links() !!}
+            @else
+                {!! $plans->links() !!}
+            @endif
         </div>
     </div>
 @stop

@@ -242,6 +242,23 @@ return [
                 ],
             ],
         ],
+
+        [
+            'text'    => 'Perfis',
+            'icon'    => 'fas fa-user',
+            'submenu' => [
+                [
+                    'text' => 'Listar',
+                    'url'  => 'admin/profiles',
+                    'icon'    => 'fas fa-fw fa-share',
+                ],
+                [
+                    'text' => 'Criar',
+                    'url'  => 'admin/profiles/create',
+                    'icon'    => 'fas fa-fw fa-share',
+                ],
+            ],
+        ],
     ],
 
     /*

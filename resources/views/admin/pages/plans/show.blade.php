@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', "Detalhes do Plano { $plan->name }")
+@section('title', "Detalhes do Plano $plan->name")
 
 @section('content_header')
     <h1>Detalhes do Plano <b>{{ $plan->name }}</b></h1>
@@ -9,6 +9,7 @@
 @section('content')
     <div class="card">
         <div class="card-body">
+            @include('admin.includes.alerts')
             <ul>
                 <li>
                     <strong>Nome: </strong> {{ $plan->name }}

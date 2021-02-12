@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', "Detalhes do Plano {$plan->name}")
+@section('title', "Detalhes do Plano $plan->name")
 
 @section('content_header')
     <ol class="breadcrumb">
@@ -16,6 +16,8 @@
 @section('content')
     <div class="card">
         <div class="card-body">
+            @include('admin.includes.alerts')
+
             <table class="table table-striped">
                 <thead>
                 <tr>
@@ -31,7 +33,7 @@
                             {{ $detail->name }}
                         </td>
                         <td>
-                            <a href="{{ route('plans.show', $plan->url) }}" class="btn btn-warning"><i class="fas fa-eye"></i></a>
+                            <a href="{{ route('details.plan.show', [$plan->url, $detail->id]) }}" class="btn btn-warning"><i class="fas fa-eye"></i></a>
                             <a href="{{ route('details.plan.edit', [$plan->url, $detail->id]) }}" class="btn btn-primary"><i class="fas fa-pencil-alt"></i></a>
                         </td>
                     </tr>

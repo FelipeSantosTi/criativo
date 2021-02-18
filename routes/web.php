@@ -13,6 +13,9 @@
 
 Route::prefix('admin')->namespace('Admin')->group(function () {
 
+    // PROFILES //
+    Route::resource('profiles', 'ACL\ProfileController');
+
     // PLAN DETAILS //
     Route::get('plans/{url}/details/create', 'DetailPlanController@create')->name('details.plan.create');
     Route::delete('plans/{url}/details/{idDetail}', 'DetailPlanController@destroy')->name('details.plan.destroy');

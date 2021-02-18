@@ -259,6 +259,23 @@ return [
                 ],
             ],
         ],
+
+        [
+            'text'    => 'Permissões',
+            'icon'    => 'fas fa-lock',
+            'submenu' => [
+                [
+                    'text' => 'Listar',
+                    'url'  => 'admin/permissions',
+                    'icon'    => 'fas fa-fw fa-share',
+                ],
+                [
+                    'text' => 'Criar',
+                    'url'  => 'admin/permissions/create',
+                    'icon'    => 'fas fa-fw fa-share',
+                ],
+            ],
+        ],
     ],
 
     /*

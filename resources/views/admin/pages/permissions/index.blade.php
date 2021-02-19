@@ -43,6 +43,7 @@
 {{--                            <a href="{{ route('details.permission.index', $permission->url) }}" class="btn btn-primary"><i class="fas fa-info-circle"></i></a>--}}
                             <a href="{{ route('permissions.show', $permission->id) }}" class="btn btn-default"><i class="fas fa-eye"></i></a>
                             <a href="{{ route('permissions.edit', $permission->id) }}" class="btn btn-warning"><i class="fas fa-pencil-alt"></i></a>
+                            <a href="{{ route('permissions.profiles', $permission->id) }}" class="btn btn-info"><i class="fas fa-user"></i></a>
                         </td>
                     </tr>
                 @endforeach

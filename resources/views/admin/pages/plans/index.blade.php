@@ -26,7 +26,7 @@
                     <tr>
                         <th>Nome</th>
                         <th>Descrição</th>
-                        <th width="180">Ações</th>
+                        <th width="230">Ações</th>
                     </tr>
                 </thead>
 
@@ -43,6 +43,7 @@
                                 <a href="{{ route('details.plan.index', $plan->url) }}" class="btn btn-primary"><i class="fas fa-info-circle"></i></a>
                                 <a href="{{ route('plans.show', $plan->url) }}" class="btn btn-default"><i class="fas fa-eye"></i></a>
                                 <a href="{{ route('plans.edit', $plan->url) }}" class="btn btn-warning"><i class="fas fa-pencil-alt"></i></a>
+                                <a href="{{ route('plans.profiles', $plan->id) }}" class="btn btn-dark"><i class="fas fa-user"></i></a>
                             </td>
                         </tr>
                     @endforeach

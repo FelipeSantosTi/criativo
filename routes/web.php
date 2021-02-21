@@ -11,7 +11,7 @@
 |
 */
 
-Route::prefix('admin')->namespace('Admin')->group(function () {
+Route::prefix('admin')->namespace('Admin')->middleware('auth')->group(function () {
 
     // PLAN x PROFILE //
     Route::get('plans/{id}/profiles/{idProfile}/detach', 'ACL\PlanProfileController@detachProfilesPlan')->name('plans.profiles.detach');
@@ -61,3 +61,6 @@ Route::prefix('admin')->namespace('Admin')->group(function () {
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+//Auth::routes(['register' => false]);

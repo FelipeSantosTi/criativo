@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
+use App\Services\SchoolService;
 use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
@@ -54,7 +55,7 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'cnpj' => ['required', 'unique:schools'],
+            'cnpj' => ['required', 'numeric', 'unique:schools'],
             'company' => ['required', 'unique:schools,name'],
         ]);
     }
@@ -76,21 +77,8 @@ class RegisterController extends Controller
             return redirect()->route('site.home');
         }
 
-        $school = $plan->schools()->create([
-            'cnpj' => $data['cnpj'],
-            'name' => $data['company'],
-            'url' => Str::kebab($data['company']),
-            'email' => $data['email'],
-
-            'subscription' => now(),
-            'expires_at' => now()->addDays(7),
-        ]);
-
-        $user = $school->users()->create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => bcrypt($data['password']),
-        ]);
+        $schoolService = app(SchoolService::class);
+        $user = $schoolService->make($plan, $data);
 
         return $user;
     }

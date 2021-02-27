@@ -233,12 +233,12 @@ return [
                 [
                     'text' => 'Listar',
                     'url'  => 'admin/plans',
-                    'icon'    => 'fas fa-fw fa-share',
+                    'icon'    => 'fas fa-list-ol',
                 ],
                 [
                     'text' => 'Criar',
                     'url'  => 'admin/plans/create',
-                    'icon'    => 'fas fa-fw fa-share',
+                    'icon'    => 'fas fa-plus',
                 ],
             ],
         ],
@@ -250,12 +250,12 @@ return [
                 [
                     'text' => 'Listar',
                     'url'  => 'admin/profiles',
-                    'icon'    => 'fas fa-fw fa-share',
+                    'icon'    => 'fas fa-list-ol',
                 ],
                 [
                     'text' => 'Criar',
                     'url'  => 'admin/profiles/create',
-                    'icon'    => 'fas fa-fw fa-share',
+                    'icon'    => 'fas fa-plus',
                 ],
             ],
         ],
@@ -267,12 +267,12 @@ return [
                 [
                     'text' => 'Listar',
                     'url'  => 'admin/permissions',
-                    'icon'    => 'fas fa-fw fa-share',
+                    'icon'    => 'fas fa-list-ol',
                 ],
                 [
                     'text' => 'Criar',
                     'url'  => 'admin/permissions/create',
-                    'icon'    => 'fas fa-fw fa-share',
+                    'icon'    => 'fas fa-plus',
                 ],
             ],
         ],

@@ -22,6 +22,11 @@ class Plan extends Model
         return $this->belongsToMany(Profile::class);
     }
 
+    public function schools()
+    {
+        return $this->hasMany(School::class);
+    }
+
     public function search($filter = null)
     {
         $results = $this->where('name', 'LIKE', "%{$filter}%")

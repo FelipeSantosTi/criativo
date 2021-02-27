@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\Models\User;
+use App\Models\School;
 
 class UsersTableSeeder extends Seeder
 {
@@ -12,7 +13,9 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        User::create([
+        $school = School::first();
+
+        $school->users()->create([
             'name' => 'Felipe Santos',
             'email' => 'felipe@thunderbyte.com.br',
             'password' => bcrypt('Felipe13')

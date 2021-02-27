@@ -8,6 +8,7 @@ use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Str;
 
 class RegisterController extends Controller
 {
@@ -53,6 +54,8 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'cnpj' => ['required', 'unique:schools'],
+            'company' => ['required', 'unique:schools,name'],
         ]);
     }
 
@@ -64,10 +67,31 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+//        return User::create([
+//            'name' => $data['name'],
+//            'email' => $data['email'],
+//            'password' => Hash::make($data['password']),
+//        ]);
+        if (!$plan = session('plan')) {
+            return redirect()->route('site.home');
+        }
+
+        $school = $plan->schools()->create([
+            'cnpj' => $data['cnpj'],
+            'name' => $data['company'],
+            'url' => Str::kebab($data['company']),
+            'email' => $data['email'],
+
+            'subscription' => now(),
+            'expires_at' => now()->addDays(7),
+        ]);
+
+        $user = $school->users()->create([
             'name' => $data['name'],
             'email' => $data['email'],
-            'password' => Hash::make($data['password']),
+            'password' => bcrypt($data['password']),
         ]);
+
+        return $user;
     }
 }

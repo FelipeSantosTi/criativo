@@ -276,6 +276,23 @@ return [
                 ],
             ],
         ],
+
+        [
+            'text'    => 'USuários',
+            'icon'    => 'fas fa-users',
+            'submenu' => [
+                [
+                    'text' => 'Listar',
+                    'url'  => 'admin/users',
+                    'icon'    => 'fas fa-list-ol',
+                ],
+                [
+                    'text' => 'Criar',
+                    'url'  => 'admin/users/create',
+                    'icon'    => 'fas fa-plus',
+                ],
+            ],
+        ],
     ],
 
     /*

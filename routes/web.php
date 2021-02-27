@@ -13,6 +13,10 @@
 
 Route::prefix('admin')->namespace('Admin')->middleware('auth')->group(function () {
 
+    // USERS //
+    Route::any('users/search', 'UserController@search')->name('users.search');
+    Route::resource('users', 'UserController');
+
     // PLAN x PROFILE //
     Route::get('plans/{id}/profiles/{idProfile}/detach', 'ACL\PlanProfileController@detachProfilesPlan')->name('plans.profiles.detach');
     Route::post('plans/{id}/profiles', 'ACL\PlanProfileController@attachProfilesPlan')->name('plans.profiles.attach');

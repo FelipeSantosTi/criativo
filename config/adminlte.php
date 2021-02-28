@@ -325,12 +325,12 @@ return [
             'submenu' => [
                 [
                     'text' => 'Listar',
-                    'url'  => 'admin/courses',
+                    'url'  => 'admin/classes',
                     'icon'    => 'fas fa-list-ol',
                 ],
                 [
                     'text' => 'Criar',
-                    'url'  => 'admin/courses/create',
+                    'url'  => 'admin/classes/create',
                     'icon'    => 'fas fa-plus',
                 ],
             ],
@@ -342,12 +342,12 @@ return [
             'submenu' => [
                 [
                     'text' => 'Listar',
-                    'url'  => 'admin/courses',
+                    'url'  => 'admin/rooms',
                     'icon'    => 'fas fa-list-ol',
                 ],
                 [
                     'text' => 'Criar',
-                    'url'  => 'admin/courses/create',
+                    'url'  => 'admin/rooms/create',
                     'icon'    => 'fas fa-plus',
                 ],
             ],
@@ -359,12 +359,12 @@ return [
             'submenu' => [
                 [
                     'text' => 'Listar',
-                    'url'  => 'admin/courses',
+                    'url'  => 'admin/students',
                     'icon'    => 'fas fa-list-ol',
                 ],
                 [
                     'text' => 'Criar',
-                    'url'  => 'admin/courses/create',
+                    'url'  => 'admin/students/create',
                     'icon'    => 'fas fa-plus',
                 ],
             ],

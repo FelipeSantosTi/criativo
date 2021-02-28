@@ -13,6 +13,14 @@
 
 Route::prefix('admin')->namespace('Admin')->middleware('auth')->group(function () {
 
+    // CLASSES //
+    Route::any('classes/search', 'UserController@search')->name('classes.search');
+    Route::resource('classes', 'UserController');
+
+    // COURSES //
+    Route::any('courses/search', 'CourseController@search')->name('courses.search');
+    Route::resource('courses', 'CourseController');
+
     // USERS //
     Route::any('users/search', 'UserController@search')->name('users.search');
     Route::resource('users', 'UserController');

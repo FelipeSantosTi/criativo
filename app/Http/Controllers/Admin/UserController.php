@@ -93,7 +93,7 @@ class UserController extends Controller
         $users = $this->repository->
         where(function ($query) use ($request) {
             if ($request->filter) {
-                $query->where('name', $request->filter)->
+                $query->where('name', 'LIKE', "%{$request->filter}%")->
                 orWhere('email', 'LIKE', "%{$request->filter}%");
             }
         })->latest()->schoolUser()->paginate();

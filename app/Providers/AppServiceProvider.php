@@ -2,10 +2,16 @@
 
 namespace App\Providers;
 
-use App\Models\Plan;
-use App\Models\School;
-use App\Observers\PlanObserver;
-use App\Observers\SchoolObserver;
+use App\Models\{
+    Plan,
+    School,
+    Course
+};
+use App\Observers\{
+    PlanObserver,
+    SchoolObserver,
+    CourseObserver
+};
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -29,5 +35,6 @@ class AppServiceProvider extends ServiceProvider
     {
         Plan::observe(PlanObserver::class);
         School::observe(SchoolObserver::class);
+        Course::observe(CourseObserver::class);
     }
 }

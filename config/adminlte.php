@@ -278,7 +278,7 @@ return [
         ],
 
         [
-            'text'    => 'USuários',
+            'text'    => 'Usuários',
             'icon'    => 'fas fa-users',
             'submenu' => [
                 [

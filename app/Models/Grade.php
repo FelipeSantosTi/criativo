@@ -17,6 +17,22 @@ class Grade extends Model
 
     public function courses()
     {
-        return $this->belongsTo(Course::class);
+        return $this->belongsToMany(Course::class);
+    }
+
+    public function coursesAvailable($filter = null)
+    {
+        $courses = Course::whereNotIn('courses.id', function ($query) {
+            $query->select('course_grade.course_id');
+            $query->from('course_grade');
+            $query->whereRaw("course_grade.grade_id={$this->id}");
+        })
+            ->where(function ($queryFilter) use ($filter) {
+                if ($filter)
+                    $queryFilter->where('courses.name', 'LIKE', "%{$filter}%");
+            })
+            ->paginate();
+
+        return $courses;
     }
 }

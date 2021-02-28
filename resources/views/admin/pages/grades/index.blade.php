@@ -42,6 +42,7 @@
                             <td>
                                 <a href="{{ route('grades.show', $grade->id) }}" class="btn btn-default"><i class="fas fa-eye"></i></a>
                                 <a href="{{ route('grades.edit', $grade->id) }}" class="btn btn-warning"><i class="fas fa-pencil-alt"></i></a>
+                                <a href="{{ route('grades.courses', $grade->id) }}" class="btn btn-info"><i class="fas fa-graduation-cap"></i></a>
                             </td>
                         </tr>
                     @endforeach

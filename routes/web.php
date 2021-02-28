@@ -13,6 +13,13 @@
 
 Route::prefix('admin')->namespace('Admin')->middleware('auth')->group(function () {
 
+    // GRADE x COURSE //
+    Route::get('grades/{id}/courses/{idCourse}/detach', 'CourseGradeController@detachCoursesGrade')->name('grades.courses.detach');
+    Route::post('grades/{id}/courses', 'CourseGradeController@attachCoursesGrade')->name('grades.courses.attach');
+    Route::any('grades/{id}/courses/create', 'CourseGradeController@coursesAvailable')->name('grades.courses.available');
+    Route::get('grades/{id}/courses', 'CourseGradeController@courses')->name('grades.courses');
+    Route::get('courses/{id}/grades', 'CourseGradeController@grades')->name('courses.grades');
+
     // GRADES //
     Route::any('grades/search', 'GradeController@search')->name('grades.search');
     Route::resource('grades', 'GradeController');

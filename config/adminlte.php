@@ -236,12 +236,12 @@ return [
                 [
                     'text' => 'Listar',
                     'url'  => 'admin/plans',
-                    'icon'    => 'fas fa-list-ol',
+                    'icon' => 'fas fa-list-ol',
                 ],
                 [
                     'text' => 'Criar',
                     'url'  => 'admin/plans/create',
-                    'icon'    => 'fas fa-plus',
+                    'icon' => 'fas fa-plus',
                 ],
             ],
         ],
@@ -253,12 +253,12 @@ return [
                 [
                     'text' => 'Listar',
                     'url'  => 'admin/profiles',
-                    'icon'    => 'fas fa-list-ol',
+                    'icon' => 'fas fa-list-ol',
                 ],
                 [
                     'text' => 'Criar',
                     'url'  => 'admin/profiles/create',
-                    'icon'    => 'fas fa-plus',
+                    'icon' => 'fas fa-plus',
                 ],
             ],
         ],
@@ -270,12 +270,12 @@ return [
                 [
                     'text' => 'Listar',
                     'url'  => 'admin/permissions',
-                    'icon'    => 'fas fa-list-ol',
+                    'icon' => 'fas fa-list-ol',
                 ],
                 [
                     'text' => 'Criar',
                     'url'  => 'admin/permissions/create',
-                    'icon'    => 'fas fa-plus',
+                    'icon' => 'fas fa-plus',
                 ],
             ],
         ],
@@ -287,12 +287,12 @@ return [
                 [
                     'text' => 'Listar',
                     'url'  => 'admin/users',
-                    'icon'    => 'fas fa-list-ol',
+                    'icon' => 'fas fa-list-ol',
                 ],
                 [
                     'text' => 'Criar',
                     'url'  => 'admin/users/create',
-                    'icon'    => 'fas fa-plus',
+                    'icon' => 'fas fa-plus',
                 ],
             ],
         ],
@@ -309,12 +309,12 @@ return [
                 [
                     'text' => 'Listar',
                     'url'  => 'admin/courses',
-                    'icon'    => 'fas fa-list-ol',
+                    'icon' => 'fas fa-list-ol',
                 ],
                 [
                     'text' => 'Criar',
                     'url'  => 'admin/courses/create',
-                    'icon'    => 'fas fa-plus',
+                    'icon' => 'fas fa-plus',
                 ],
             ],
         ],
@@ -326,32 +326,32 @@ return [
                 [
                     'text' => 'Listar',
                     'url'  => 'admin/grades',
-                    'icon'    => 'fas fa-list-ol',
+                    'icon' => 'fas fa-list-ol',
                 ],
                 [
                     'text' => 'Criar',
                     'url'  => 'admin/grades/create',
-                    'icon'    => 'fas fa-plus',
+                    'icon' => 'fas fa-plus',
                 ],
             ],
         ],
 
-        [
-            'text'    => 'Salas',
-            'icon'    => 'fas fa-chalkboard-teacher',
-            'submenu' => [
-                [
-                    'text' => 'Listar',
-                    'url'  => 'admin/rooms',
-                    'icon'    => 'fas fa-list-ol',
-                ],
-                [
-                    'text' => 'Criar',
-                    'url'  => 'admin/rooms/create',
-                    'icon'    => 'fas fa-plus',
-                ],
-            ],
-        ],
+//        [
+//            'text'    => 'Salas',
+//            'icon'    => 'fas fa-chalkboard-teacher',
+//            'submenu' => [
+//                [
+//                    'text' => 'Listar',
+//                    'url'  => 'admin/rooms',
+//                    'icon'    => 'fas fa-list-ol',
+//                ],
+//                [
+//                    'text' => 'Criar',
+//                    'url'  => 'admin/rooms/create',
+//                    'icon' => 'fas fa-plus',
+//                ],
+//            ],
+//        ],
 
         [
             'text'    => 'Alunos',
@@ -360,12 +360,12 @@ return [
                 [
                     'text' => 'Listar',
                     'url'  => 'admin/students',
-                    'icon'    => 'fas fa-list-ol',
+                    'icon' => 'fas fa-list-ol',
                 ],
                 [
                     'text' => 'Criar',
                     'url'  => 'admin/students/create',
-                    'icon'    => 'fas fa-plus',
+                    'icon' => 'fas fa-plus',
                 ],
             ],
         ],

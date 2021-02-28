@@ -5,18 +5,18 @@ namespace App\Models;
 use App\School\Traits\SchoolTrait;
 use Illuminate\Database\Eloquent\Model;
 
-class Course extends Model
+class Grade extends Model
 {
     use SchoolTrait;
 
     protected $fillable = [
         'name',
-        'url',
-        'description'
+        'description',
+        'url'
     ];
 
-    public function grades()
+    public function courses()
     {
-        return $this->hasMany(Grade::class);
+        return $this->belongsTo(Course::class);
     }
 }

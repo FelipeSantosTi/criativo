@@ -320,17 +320,17 @@ return [
         ],
 
         [
-            'text'    => 'Turmas',
+            'text'    => 'Classes',
             'icon'    => 'fas fa-shapes',
             'submenu' => [
                 [
                     'text' => 'Listar',
-                    'url'  => 'admin/classes',
+                    'url'  => 'admin/grades',
                     'icon'    => 'fas fa-list-ol',
                 ],
                 [
                     'text' => 'Criar',
-                    'url'  => 'admin/classes/create',
+                    'url'  => 'admin/grades/create',
                     'icon'    => 'fas fa-plus',
                 ],
             ],

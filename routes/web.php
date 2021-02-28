@@ -13,9 +13,9 @@
 
 Route::prefix('admin')->namespace('Admin')->middleware('auth')->group(function () {
 
-    // CLASSES //
-    Route::any('classes/search', 'UserController@search')->name('classes.search');
-    Route::resource('classes', 'UserController');
+    // GRADES //
+    Route::any('grades/search', 'GradeController@search')->name('grades.search');
+    Route::resource('grades', 'GradeController');
 
     // COURSES //
     Route::any('courses/search', 'CourseController@search')->name('courses.search');

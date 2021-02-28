@@ -224,7 +224,10 @@ return [
     */
 
     'menu' => [
-        ['header' => 'Configurações'],
+        [
+            'header'   => 'Configurações',
+            'classes'  => 'text-bold text-center',
+        ],
 
         [
             'text'    => 'Planos',
@@ -289,6 +292,79 @@ return [
                 [
                     'text' => 'Criar',
                     'url'  => 'admin/users/create',
+                    'icon'    => 'fas fa-plus',
+                ],
+            ],
+        ],
+
+        [
+            'header'   => 'Pedagógico',
+            'classes'  => 'text-bold text-center',
+        ],
+
+        [
+            'text'    => 'Cursos',
+            'icon'    => 'fas fa-graduation-cap',
+            'submenu' => [
+                [
+                    'text' => 'Listar',
+                    'url'  => 'admin/courses',
+                    'icon'    => 'fas fa-list-ol',
+                ],
+                [
+                    'text' => 'Criar',
+                    'url'  => 'admin/courses/create',
+                    'icon'    => 'fas fa-plus',
+                ],
+            ],
+        ],
+
+        [
+            'text'    => 'Turmas',
+            'icon'    => 'fas fa-shapes',
+            'submenu' => [
+                [
+                    'text' => 'Listar',
+                    'url'  => 'admin/courses',
+                    'icon'    => 'fas fa-list-ol',
+                ],
+                [
+                    'text' => 'Criar',
+                    'url'  => 'admin/courses/create',
+                    'icon'    => 'fas fa-plus',
+                ],
+            ],
+        ],
+
+        [
+            'text'    => 'Salas',
+            'icon'    => 'fas fa-chalkboard-teacher',
+            'submenu' => [
+                [
+                    'text' => 'Listar',
+                    'url'  => 'admin/courses',
+                    'icon'    => 'fas fa-list-ol',
+                ],
+                [
+                    'text' => 'Criar',
+                    'url'  => 'admin/courses/create',
+                    'icon'    => 'fas fa-plus',
+                ],
+            ],
+        ],
+
+        [
+            'text'    => 'Alunos',
+            'icon'    => 'fas fa-user-graduate',
+            'submenu' => [
+                [
+                    'text' => 'Listar',
+                    'url'  => 'admin/courses',
+                    'icon'    => 'fas fa-list-ol',
+                ],
+                [
+                    'text' => 'Criar',
+                    'url'  => 'admin/courses/create',
                     'icon'    => 'fas fa-plus',
                 ],
             ],

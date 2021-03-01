@@ -227,11 +227,13 @@ return [
         [
             'header'   => 'Configurações',
             'classes'  => 'text-bold text-center',
+            'can'      => 'Configurações'
         ],
 
         [
             'text'    => 'Planos',
             'icon'    => 'fas fa-list-alt',
+            'can'      => 'Planos',
             'submenu' => [
                 [
                     'text' => 'Listar',
@@ -249,6 +251,7 @@ return [
         [
             'text'    => 'Perfis',
             'icon'    => 'fas fa-user',
+            'can'      => 'Perfis',
             'submenu' => [
                 [
                     'text' => 'Listar',
@@ -266,6 +269,7 @@ return [
         [
             'text'    => 'Permissões',
             'icon'    => 'fas fa-lock',
+            'can'      => 'Permissões',
             'submenu' => [
                 [
                     'text' => 'Listar',
@@ -283,6 +287,7 @@ return [
         [
             'text'    => 'Usuários',
             'icon'    => 'fas fa-users',
+            'can'      => 'Usuários',
             'submenu' => [
                 [
                     'text' => 'Listar',
@@ -300,11 +305,13 @@ return [
         [
             'header'   => 'Pedagógico',
             'classes'  => 'text-bold text-center',
+            'can'      => 'Pedagógico',
         ],
 
         [
             'text'    => 'Cursos',
             'icon'    => 'fas fa-graduation-cap',
+            'can'     => 'Cursos',
             'submenu' => [
                 [
                     'text' => 'Listar',
@@ -322,6 +329,7 @@ return [
         [
             'text'    => 'Classes',
             'icon'    => 'fas fa-shapes',
+            'can'     => 'Classes',
             'submenu' => [
                 [
                     'text' => 'Listar',

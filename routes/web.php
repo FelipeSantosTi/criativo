@@ -13,6 +13,11 @@
 
 Route::prefix('admin')->namespace('Admin')->middleware('auth')->group(function () {
 
+    // TESTES //
+    Route::get('test-acl', function () {
+        dd(auth()->user()->isAdmin());
+    });
+
     // GRADE x COURSE //
     Route::get('grades/{id}/courses/{idCourse}/detach', 'CourseGradeController@detachCoursesGrade')->name('grades.courses.detach');
     Route::post('grades/{id}/courses', 'CourseGradeController@attachCoursesGrade')->name('grades.courses.attach');

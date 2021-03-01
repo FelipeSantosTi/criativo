@@ -27,6 +27,6 @@ class School extends Model
 
     public function plan()
     {
-        return $this->belongsTo(School::class);
+        return $this->belongsTo(Plan::class);
     }
 }

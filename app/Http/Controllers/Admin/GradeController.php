@@ -14,6 +14,8 @@ class GradeController extends Controller
     public function __construct(Grade $grade)
     {
         $this->repository = $grade;
+
+        $this->middleware(['can:Classes']);
     }
 
     public function index()

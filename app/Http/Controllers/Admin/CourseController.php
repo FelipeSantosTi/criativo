@@ -15,6 +15,8 @@ class CourseController extends Controller
     public function __construct(Course $course)
     {
         $this->repository = $course;
+
+        $this->middleware(['can:Cursos']);
     }
 
     public function index()

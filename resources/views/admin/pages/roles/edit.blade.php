@@ -1,19 +1,19 @@
 @extends('adminlte::page')
 
-@section('title', 'Editar Classe')
+@section('title', 'Editar Cargo')
 
 @section('content_header')
-    <h1>Editar Classe {{ $grade->name }}</h1>
+    <h1>Editar Cargo {{ $role->name }}</h1>
 @stop
 
 @section('content')
     <div class="card">
         <div class="card-body">
-            <form action="{{ route('grades.update', $grade->id) }}" class="form" method="POST">
+            <form action="{{ route('roles.update', $role->id) }}" class="form" method="POST">
                 @csrf
                 @method('PUT')
 
-                @include('admin.pages.grades._partials.form')
+                @include('admin.pages.roles._partials.form')
             </form>
         </div>
     </div>

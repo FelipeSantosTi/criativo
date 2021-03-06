@@ -18,6 +18,10 @@ Route::prefix('admin')->namespace('Admin')->middleware('auth')->group(function (
         dd(auth()->user()->isAdmin());
     });
 
+    // ROLES //
+    Route::any('roles/search', 'ACL\RoleController@search')->name('roles.search');
+    Route::resource('roles', 'ACL\RoleController');
+
     // GRADE x COURSE //
     Route::get('grades/{id}/courses/{idCourse}/detach', 'CourseGradeController@detachCoursesGrade')->name('grades.courses.detach');
     Route::post('grades/{id}/courses', 'CourseGradeController@attachCoursesGrade')->name('grades.courses.attach');

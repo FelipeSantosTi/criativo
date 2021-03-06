@@ -224,6 +224,121 @@ return [
     */
 
     'menu' => [
+
+        [
+            'header'   => 'Pedagógico',
+            'classes'  => 'text-bold text-center',
+            'can'      => 'Pedagógico',
+        ],
+
+        [
+            'text'    => 'Cursos',
+            'icon'    => 'fas fa-graduation-cap',
+            'can'     => 'Cursos',
+            'submenu' => [
+                [
+                    'text' => 'Listar',
+                    'url'  => 'admin/courses',
+                    'icon' => 'fas fa-list-ol',
+                ],
+                [
+                    'text' => 'Criar',
+                    'url'  => 'admin/courses/create',
+                    'icon' => 'fas fa-plus',
+                ],
+            ],
+        ],
+
+        [
+            'text'    => 'Classes',
+            'icon'    => 'fas fa-shapes',
+            'can'     => 'Classes',
+            'submenu' => [
+                [
+                    'text' => 'Listar',
+                    'url'  => 'admin/grades',
+                    'icon' => 'fas fa-list-ol',
+                ],
+                [
+                    'text' => 'Criar',
+                    'url'  => 'admin/grades/create',
+                    'icon' => 'fas fa-plus',
+                ],
+            ],
+        ],
+
+//        [
+//            'text'    => 'Salas',
+//            'icon'    => 'fas fa-chalkboard-teacher',
+//            'can'     => 'Salas',
+//            'submenu' => [
+//                [
+//                    'text' => 'Listar',
+//                    'url'  => 'admin/rooms',
+//                    'icon'    => 'fas fa-list-ol',
+//                ],
+//                [
+//                    'text' => 'Criar',
+//                    'url'  => 'admin/rooms/create',
+//                    'icon' => 'fas fa-plus',
+//                ],
+//            ],
+//        ],
+
+        [
+            'text'    => 'Disciplinas',
+            'icon'    => 'fas fa-book',
+            'can'     => 'Disciplinas',
+            'submenu' => [
+                [
+                    'text' => 'Listar',
+                    'url'  => 'admin/subjects',
+                    'icon' => 'fas fa-list-ol',
+                ],
+                [
+                    'text' => 'Criar',
+                    'url'  => 'admin/subjects/create',
+                    'icon' => 'fas fa-plus',
+                ],
+            ],
+        ],
+
+        [
+            'text'    => 'Professores',
+            'icon'    => 'fas fa-chalkboard-teacher',
+            'can'      => 'Professores',
+            'submenu' => [
+                [
+                    'text' => 'Listar',
+                    'url'  => 'admin/teachers',
+                    'icon' => 'fas fa-list-ol',
+                ],
+                [
+                    'text' => 'Criar',
+                    'url'  => 'admin/teachers/create',
+                    'icon' => 'fas fa-plus',
+                ],
+            ],
+        ],
+
+        [
+            'text'    => 'Alunos',
+            'icon'    => 'fas fa-user-graduate',
+            'can'      => 'Alunos',
+            'submenu' => [
+                [
+                    'text' => 'Listar',
+                    'url'  => 'admin/students',
+                    'icon' => 'fas fa-list-ol',
+                ],
+                [
+                    'text' => 'Criar',
+                    'url'  => 'admin/students/create',
+                    'icon' => 'fas fa-plus',
+                ],
+            ],
+        ],
+
         [
             'header'   => 'Configurações',
             'classes'  => 'text-bold text-center',
@@ -285,6 +400,24 @@ return [
         ],
 
         [
+            'text'    => 'Cargos',
+            'icon'    => 'fas fa-address-card',
+            'can'      => 'Cargos',
+            'submenu' => [
+                [
+                    'text' => 'Listar',
+                    'url'  => 'admin/roles',
+                    'icon' => 'fas fa-list-ol',
+                ],
+                [
+                    'text' => 'Criar',
+                    'url'  => 'admin/roles/create',
+                    'icon' => 'fas fa-plus',
+                ],
+            ],
+        ],
+
+        [
             'text'    => 'Usuários',
             'icon'    => 'fas fa-users',
             'can'      => 'Usuários',
@@ -303,79 +436,9 @@ return [
         ],
 
         [
-            'header'   => 'Pedagógico',
+            'header'   => 'Financeiro',
             'classes'  => 'text-bold text-center',
-            'can'      => 'Pedagógico',
-        ],
-
-        [
-            'text'    => 'Cursos',
-            'icon'    => 'fas fa-graduation-cap',
-            'can'     => 'Cursos',
-            'submenu' => [
-                [
-                    'text' => 'Listar',
-                    'url'  => 'admin/courses',
-                    'icon' => 'fas fa-list-ol',
-                ],
-                [
-                    'text' => 'Criar',
-                    'url'  => 'admin/courses/create',
-                    'icon' => 'fas fa-plus',
-                ],
-            ],
-        ],
-
-        [
-            'text'    => 'Classes',
-            'icon'    => 'fas fa-shapes',
-            'can'     => 'Classes',
-            'submenu' => [
-                [
-                    'text' => 'Listar',
-                    'url'  => 'admin/grades',
-                    'icon' => 'fas fa-list-ol',
-                ],
-                [
-                    'text' => 'Criar',
-                    'url'  => 'admin/grades/create',
-                    'icon' => 'fas fa-plus',
-                ],
-            ],
-        ],
-
-//        [
-//            'text'    => 'Salas',
-//            'icon'    => 'fas fa-chalkboard-teacher',
-//            'submenu' => [
-//                [
-//                    'text' => 'Listar',
-//                    'url'  => 'admin/rooms',
-//                    'icon'    => 'fas fa-list-ol',
-//                ],
-//                [
-//                    'text' => 'Criar',
-//                    'url'  => 'admin/rooms/create',
-//                    'icon' => 'fas fa-plus',
-//                ],
-//            ],
-//        ],
-
-        [
-            'text'    => 'Alunos',
-            'icon'    => 'fas fa-user-graduate',
-            'submenu' => [
-                [
-                    'text' => 'Listar',
-                    'url'  => 'admin/students',
-                    'icon' => 'fas fa-list-ol',
-                ],
-                [
-                    'text' => 'Criar',
-                    'url'  => 'admin/students/create',
-                    'icon' => 'fas fa-plus',
-                ],
-            ],
+            'can'      => 'Financeiro'
         ],
     ],
 

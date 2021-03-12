@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
+use App\School\Events\SchoolCreated;
 use App\Services\SchoolService;
 use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -79,6 +80,8 @@ class RegisterController extends Controller
 
         $schoolService = app(SchoolService::class);
         $user = $schoolService->make($plan, $data);
+
+        event(new SchoolCreated($user));
 
         return $user;
     }

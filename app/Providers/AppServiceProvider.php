@@ -6,13 +6,15 @@ use App\Models\{
     Plan,
     School,
     Course,
-    Grade
+    Grade,
+    Subject
 };
 use App\Observers\{
     PlanObserver,
     SchoolObserver,
     CourseObserver,
-    GradeObserver
+    GradeObserver,
+    SubjectObserver
 };
 use Illuminate\Support\ServiceProvider;
 
@@ -39,5 +41,6 @@ class AppServiceProvider extends ServiceProvider
         School::observe(SchoolObserver::class);
         Course::observe(CourseObserver::class);
         Grade::observe(GradeObserver::class);
+        Subject::observe(SubjectObserver::class);
     }
 }

@@ -35,4 +35,9 @@ class Grade extends Model
 
         return $courses;
     }
+
+    public function subjects()
+    {
+        return $this->belongsToMany(Subject::class);
+    }
 }

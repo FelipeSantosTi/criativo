@@ -13,6 +13,15 @@
 
 Route::prefix('admin')->namespace('Admin')->middleware('auth')->group(function () {
 
+    // TESTES //
+    Route::get('test-acl', function () {
+        dd(auth()->user()->isAdmin());
+    });
+
+    // SUBJECTS //
+    Route::any('subjects/search', 'SubjectController@search')->name('subjects.search');
+    Route::resource('subjects', 'SubjectController');
+
     // ROLE x USER //
     Route::get('users/{id}/roles/{idRole}/detach', 'ACL\RoleUserController@detachRolesUser')->name('users.roles.detach');
     Route::post('users/{id}/roles', 'ACL\RoleUserController@attachRolesUser')->name('users.roles.attach');
@@ -26,11 +35,6 @@ Route::prefix('admin')->namespace('Admin')->middleware('auth')->group(function (
     Route::any('roles/{id}/permissions/create', 'ACL\PermissionRoleController@permissionsAvailable')->name('roles.permissions.available');
     Route::get('roles/{id}/permissions', 'ACL\PermissionRoleController@permissions')->name('roles.permissions');
     Route::get('permissions/{id}/role', 'ACL\PermissionRoleController@roles')->name('permissions.roles');
-
-    // TESTES //
-    Route::get('test-acl', function () {
-        dd(auth()->user()->isAdmin());
-    });
 
     // ROLES //
     Route::any('roles/search', 'ACL\RoleController@search')->name('roles.search');

@@ -5,11 +5,23 @@ namespace App\Services;
 
 
 use App\Models\Plan;
+use App\Repositories\Contracts\SchoolRepositoryInterface;
 use Illuminate\Support\Str;
 
 class SchoolService
 {
     private $plan, $data = [];
+    private $repository;
+
+    public function __construct(SchoolRepositoryInterface $repository)
+    {
+        $this->repository = $repository;
+    }
+
+    public function getAllSchools()
+    {
+        return $this->repository->getAllSchools();
+    }
 
     public function make(Plan $plan, array $data)
     {

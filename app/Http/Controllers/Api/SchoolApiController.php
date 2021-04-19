@@ -16,8 +16,22 @@ class SchoolApiController extends Controller
         $this->schoolService = $schoolService;
     }
 
-    public function index()
+    public function index(Request $request)
     {
-        return SchoolResource::collection($this->schoolService->getAllSchools());
+        $per_page = (int) $request->get('per_page', 15);
+
+        $schools = $this->schoolService->getAllSchools($per_page);
+
+        return SchoolResource::collection($schools);
+    }
+
+    public function show($uuid)
+    {
+        if (!$school = $this->schoolService->getSchoolByUuid($uuid)) {
+            return response()->json(['message' => 'Not Found!']);
+        }
+
+
+        return new SchoolResource($school);
     }
 }

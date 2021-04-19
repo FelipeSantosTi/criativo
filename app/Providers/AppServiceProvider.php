@@ -2,8 +2,6 @@
 
 namespace App\Providers;
 
-use App\Repositories\Contracts\SchoolRepositoryInterface;
-use App\Repositories\SchoolRepository;
 use App\Models\{
     Plan,
     School,
@@ -29,10 +27,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind(
-            SchoolRepositoryInterface::class,
-            SchoolRepository::class
-        );
+        //
     }
 
     /**

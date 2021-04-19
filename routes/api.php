@@ -17,4 +17,5 @@ use Illuminate\Http\Request;
 //    return $request->user();
 //});
 
+Route::get('/schools/{uuid}', 'Api\SchoolApiController@show');
 Route::get('/schools', 'Api\SchoolApiController@index');

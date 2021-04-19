@@ -18,9 +18,15 @@ class SchoolService
         $this->repository = $repository;
     }
 
-    public function getAllSchools()
+    public function getAllSchools(int $per_page)
     {
-        return $this->repository->getAllSchools();
+        return $this->repository->getAllSchools($per_page);
+    }
+
+
+    public function getSchoolByUuid(string $uuid)
+    {
+        return $this->repository->getSchoolByUuid($uuid);
     }
 
     public function make(Plan $plan, array $data)
